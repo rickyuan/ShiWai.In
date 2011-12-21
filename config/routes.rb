@@ -1,4 +1,18 @@
 ShiWaiIn::Application.routes.draw do
+  root to: 'pages#index'
+  match '/auth/:provider/callback', to: 'sessions#create'
+  match '/auth/failure', to: 'sessions#failure'
+  match '/logout', to: 'sessions#destroy', :as => 'logout'
+  match '/login', to: 'sessions#new'
+  match '/signup', to: 'identities#new'
+  resources :identities
+  resources :users
+  resources :events
+  
+  
+  
+  #match '/identities/new', to: 'identities#new'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

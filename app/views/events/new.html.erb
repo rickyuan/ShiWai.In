@@ -1,0 +1,28 @@
+<div class="header">
+	<div class="logo">
+		<%= link_to "ShiWai.In", root_path %>
+	</div>
+</div>
+<div class="container">
+	<% flash.each do |key, value| %>
+	<div class="<%= key %>">
+		<%= value %>
+	</div>
+	<% end %>
+	<div>
+	  <h3>创建一个特殊事件吧</h3>
+	  <%= form_for(@event) do |f| %>
+	  <div>
+		<%= f.label :name, "名称" %><br \>
+		<%= f.text_field :name %>
+	  </div>
+	  <div>
+		<%= f.label :story, "描述" %><br \>
+		<%= f.text_area :story %>
+	  </div>
+	  <div>
+		<%= f.submit "创建" %>
+	  </div>
+	  <% end %>
+	</div>
+</div>

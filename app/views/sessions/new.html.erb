@@ -1,0 +1,30 @@
+<div class="fheader">
+	<div class="logo">
+		<%= link_to "ShiWai.In", root_path %>
+	</div>
+	<div class="quiet">
+		<p>生活处处都是风景，寻找自己的世外桃园。</p>
+	</div>
+	<div class="fimage">
+		<%= image_tag("display.jpg") %>
+	</div>
+	<div class="fcontent">
+		<h3>请登录<span class="description">没有账号？<%= link_to "请先创建", signup_path %></span></h3>
+		<% flash.each do |key, value| %>
+		<div class="right notice">
+			<%= value %>
+		</div>
+		<% end %>		
+		<%= form_tag "auth/identity/callback" do %>
+		  <div>
+			<%= label_tag :auth_key, "邮箱" %><br>
+			<%= text_field_tag :auth_key %>
+		  </div>
+		  <div>
+			<%= label_tag :password, "密码" %><br>
+			<%= password_field_tag :password %>
+		  </div>
+		  <div><%= submit_tag "登录" %></div>
+		<% end %>
+	</div>
+</div>

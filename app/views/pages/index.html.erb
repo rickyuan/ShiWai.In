@@ -1,0 +1,36 @@
+<% if current_user %>
+<div class="header">
+	<div class="logo">
+		<%= link_to "ShiWai.In", root_path %>
+	</div>
+</div>
+<div class="container">
+	<% flash.each do |key, value| %>
+	<div class="<%= key %>">
+		<%= value %>
+	</div>
+	<% end %>
+	<div class="square">
+	<%= link_to "+", new_event_path, :class => "bigplus" %>
+	</div>
+</div>
+<% else %>
+<div class="fheader">
+	<div class="logo">
+		<%= link_to "ShiWai.In", root_path %>
+	</div>
+	<div class="quiet">
+		<p>生活处处都是风景，寻找自己的世外桃园。</p>
+	</div>
+	<div class="fimage">
+		<%= image_tag("display.jpg") %>
+	</div>
+	<div class="fcontent">
+		<h3>生活在别处</h3>
+		<p>有时候，一觉醒来，你会发现，你昨天或者一直以来所做的事情是多么的无意义
+			，那些争吵那些办公室政治是多么无聊，索性不如背上书包，去远行。</p>
+		<%= link_to "注册账号", signup_path, :class => "btn" %>
+		<%= link_to "登录", login_path, :class => "btn" %>
+	</div>
+</div>
+<% end %>

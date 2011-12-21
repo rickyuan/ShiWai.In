@@ -1,0 +1,70 @@
+/* unlogin */
+
+.fheader {
+	width: 510px;
+	margin: 10px auto;
+}
+
+.logo {
+	font-size: 160%;
+	font-weight: bold;
+}
+
+.description {
+	color: #666;
+	font-size: 12px;
+	margin-left:10px;
+}
+
+.fheader img {
+	width: 510px;
+	height: 200px;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+
+.fheader img:hover {
+	width: 510px;
+	height: 200px;
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+}
+
+.fcontent {
+	
+}
+
+.btn {
+	font-size: 120%;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.error_messages {
+	margin-top: 20px;
+}
+
+/* login */
+
+.header {
+	margin: 10px auto;
+	width: 950px;
+}
+
+.square {
+	width: 200px;
+	height: 200px;
+	border: dashed 1px #ccc;
+	float: left;
+	margin-right: 20px;
+}
+.bigplus {
+	font-size: 600%;
+	margin-top: 40px;
+	margin-left: 80px;
+	position: absolute;
+}
+
+.disline {
+	border-bottom: 1px solid #999;
+}

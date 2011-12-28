@@ -14,13 +14,10 @@
 	  <p><%= @event.story %></p>
 	</div>
 	<div>
-		<% for post in @posts %>
-		<%= image_tag(post.photo_url) %>
-		<%= post.content %>
+		<%= form_for([@event, @post], :html => { :multipart => true }) do |f| %>
+		  <%= f.file_field :photo %><br \>
+		  <%= f.text_area :content %><br \>
+		  <%= f.submit "Create" %>
 		<% end %>
 	</div>
-	<div>
-      <%= link_to "Create a photo post!", new_event_post_path(@event, @post) %>
-	</div>
-
 </div>

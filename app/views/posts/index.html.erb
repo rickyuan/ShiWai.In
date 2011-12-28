@@ -14,13 +14,6 @@
 	  <p><%= @event.story %></p>
 	</div>
 	<div>
-		<% for post in @posts %>
-		<%= image_tag(post.photo_url) %>
-		<%= post.content %>
-		<% end %>
+      <%= render @posts %>
 	</div>
-	<div>
-      <%= link_to "Create a photo post!", new_event_post_path(@event, @post) %>
-	</div>
-
 </div>

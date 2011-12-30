@@ -8,6 +8,7 @@
 .logo {
 	font-size: 160%;
 	font-weight: bold;
+	display: inline-block;
 }
 
 .description {
@@ -57,7 +58,18 @@
 	border: dashed 1px #ccc;
 	float: left;
 	margin-right: 20px;
+	position: relative;
 }
+
+.square .sqtext {
+	position: absolute;
+	bottom: 0;
+	background: #999;
+	padding: 5px;
+	width: 190px;
+	height: 48px;
+}
+
 .bigplus {
 	font-size: 600%;
 	margin-top: 40px;
@@ -67,4 +79,22 @@
 
 .disline {
 	border-bottom: 1px solid #999;
+}
+
+/* header */
+
+.nav {
+	float: right;
+	margin-top: 0.4em;
+	font-size: 120%;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+.nav ul li {
+	display: inline-block;
+	padding: 0 0.2em;
 }

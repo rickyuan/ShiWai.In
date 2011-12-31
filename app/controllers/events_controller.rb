@@ -1,14 +1,14 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    @events = current_user.events
   end
   
   def new
-    @event = Event.new
+    @event = current_user.events.new
   end
   
   def create
-    @event = Event.new(params[:event])
+    @event = current_user.events.build(params[:event])
     if @event.save
       redirect_to @event, :flash => { :success => "Created a event successful." }
     else
@@ -18,5 +18,6 @@ class EventsController < ApplicationController
   
   def show
     @event = Event.find(params[:id])
+    @posts = @event.posts
   end
 end

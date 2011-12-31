@@ -7,6 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% unless current_user.nil? %>
+    <%= render 'layouts/header' %>
+  <% end %>
 
 <%= yield %>
 

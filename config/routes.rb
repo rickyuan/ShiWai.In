@@ -7,7 +7,10 @@ ShiWaiIn::Application.routes.draw do
   match '/signup', to: 'identities#new'
   resources :identities
   resources :users
-  resources :events
+  resources :events do
+    resources :posts
+  end
+
   
   
   

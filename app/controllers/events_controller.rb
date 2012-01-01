@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
+  
   def index
-    @events = current_user.events
+    @events = Event.all
   end
   
   def new
@@ -18,6 +19,8 @@ class EventsController < ApplicationController
   
   def show
     @event = Event.find(params[:id])
+    @user = User.find(@event.user_id)
     @posts = @event.posts
   end
+  
 end

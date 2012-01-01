@@ -7,15 +7,20 @@
 	<div>
 	  <h3><%= @event.name %></h3>
 	  <p><%= @event.story %></p>
+	  <div>
+		<%= link_to @event.user.name, @user %>
+	  </div>
+	</div>
+	<div>
+      <%= link_to "Create a photo post!", new_event_post_path(@event, @post), :class=> "action_button" %>
 	</div>
 	<div>
 		<% for post in @posts %>
-		<%= image_tag(post.photo_url) %>
-		<%= post.content %>
+		<div class="post">
+		<div><%= image_tag(post.photo_url) %></div>
+		<div class="content"><%= post.content %></div>
+		</div>
 		<% end %>
-	</div>
-	<div>
-      <%= link_to "Create a photo post!", new_event_post_path(@event, @post) %>
 	</div>
 
 </div>

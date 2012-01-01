@@ -1,4 +1,7 @@
 <div class="square">
+	<% unless event.posts.first == nil %>
+	<%= link_to image_tag(event.posts.first.photo.thumb.url), event_path(event.id) %>
+	<% end %>
 	<div class="sqtext">
 	  <%= link_to event.name, event_path(event.id) %>
 	  <%= event.story %>

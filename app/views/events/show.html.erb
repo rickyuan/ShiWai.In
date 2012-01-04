@@ -1,26 +1,20 @@
 <div class="container">
-	<% flash.each do |key, value| %>
-	<div class="<%= key %>">
-		<%= value %>
-	</div>
-	<% end %>
+<%= render 'shared/notice' %>
 	<div>
 	  <h3><%= @event.name %></h3>
-	  <p><%= @event.story %></p>
-	  <div>
-		<%= link_to @event.user.name, @user %>
-	  </div>
+	  <p><%= @event.story %>
+	  <% if current_user == @event.user %>
+	  <span><%= link_to '编辑', edit_event_path %></span>
+	  <% end %></p>
+	</div>
+	<div class="event_user">
+	  <span>创建人：</span><%= link_to @event.user.name, @user %> 
+	  <% if current_user == @event.user %>
+      <%= link_to "上传图片", new_event_post_path(@event, @post), :class=> "action_button" %>
+      <% end %>
 	</div>
 	<div>
-      <%= link_to "Create a photo post!", new_event_post_path(@event, @post), :class=> "action_button" %>
-	</div>
-	<div>
-		<% for post in @posts %>
-		<div class="post">
-		<div><%= image_tag(post.photo_url) %></div>
-		<div class="content"><%= post.content %></div>
-		</div>
-		<% end %>
+      <%= render @posts %>
 	</div>
 
 </div>

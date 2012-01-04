@@ -1,7 +1,7 @@
 <div class="container">
 <%= render 'shared/notice' %>
 	<div>
-	  <h3>创建一个特殊事件吧</h3>
+	  <h3>编辑此记录</h3>
 	  <%= form_for(@event) do |f| %>
 	  <div>
 		<%= f.label :name, "名称" %><br \>
@@ -12,7 +12,7 @@
 		<%= f.text_area :story %>
 	  </div>
 	  <div>
-		<%= f.submit "创建" %>
+		<%= f.submit "更新" %>
 	  </div>
 	  <% end %>
 	</div>

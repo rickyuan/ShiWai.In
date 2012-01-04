@@ -11,7 +11,9 @@
     <%= render 'layouts/header' %>
   <% end %>
 
-<%= yield %>
-
+  <%= yield %>
+  <% unless current_user.nil? %>
+  <%= render 'layouts/footer' %>
+  <% end %>
 </body>
 </html>

@@ -25,4 +25,18 @@ class PostsController < ApplicationController
     end
   end
   
+  def destroy
+    @event = Event.find(params[:event_id])
+    @post = @event.posts.find(params[:id])
+    @user = User.find(@event.user_id)
+    if current_user == @user
+      @post.destroy
+      redirect_to @event
+    else
+      redirect_to root_path
+    end
+  end
+  
+  private 
+  
 end

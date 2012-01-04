@@ -3,7 +3,11 @@
 	<%= link_to image_tag(event.posts.first.photo.thumb.url), event_path(event.id) %>
 	<% end %>
 	<div class="sqtext">
+	  <div class="title">
 	  <%= link_to event.name, event_path(event.id) %>
+	  </div>
+	  <div class="des">
 	  <%= event.story %>
+	  </div>
 	</div>
 </div>

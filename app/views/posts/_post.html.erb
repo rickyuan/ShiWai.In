@@ -1,4 +1,8 @@
 <div class="post">
 <div><%= image_tag(post.photo_url) %></div>
-<div class="content"><%= post.content %></div>
+<div class="content"><%= post.content %>
+<% if current_user == @event.user %>
+<span><%= link_to '删除', event_post_path(@event, post), :confirm => '确定删除？', :method => :delete %></span>
+<% end %>
+</div>
 </div>

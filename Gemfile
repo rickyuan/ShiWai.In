@@ -4,6 +4,7 @@ gem 'rails', '3.1.1'
 gem 'paperclip', '~> 2.0'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'

@@ -1,3 +1,4 @@
+# encoding: utf-8
 class PostsController < ApplicationController
   
   def index
@@ -22,6 +23,21 @@ class PostsController < ApplicationController
       redirect_to @event
     else
       render 'new'
+    end
+  end
+  
+  def edit
+    @event = Event.find(params[:event_id])
+    @post = @event.posts.find(params[:id])
+  end
+  
+  def update
+    @event = Event.find(params[:event_id])
+    @post = @event.posts.find(params[:id])
+    if @post.update_attributes(params[:post])
+      redirect_to @event, :flash => { :success => "修改成功！" }
+    else
+      render 'edit'
     end
   end
   

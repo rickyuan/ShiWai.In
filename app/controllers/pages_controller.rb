@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.page(params[:page])    
   end
 end

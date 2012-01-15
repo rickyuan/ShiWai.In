@@ -75,7 +75,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.4)
-    mysql (2.8.1)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.2.1)
@@ -159,7 +158,6 @@ DEPENDENCIES
   fog
   jquery-rails
   kaminari
-  mysql
   omniauth-identity
   paperclip (~> 2.0)
   passenger

@@ -11,7 +11,6 @@
 	<div class="fcontent">
 		<h3>请注册<span class="description">已有账号？<%= link_to "请登录", login_path %></span></h3>
 		<%= form_tag "/auth/identity/register" do %>
-            <%= render 'shared/error_message_for', :object => @identity %>
 			<div>
 				<%= label_tag :name, "昵称" %><br>
 				<%= text_field_tag :name, @identity.try(:name) %>

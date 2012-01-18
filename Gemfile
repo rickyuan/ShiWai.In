@@ -18,6 +18,7 @@ gem 'sqlite3'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'omniauth-identity'
+gem 'omniauth-weibo'
 
 
 # Gems used only for assets and not required

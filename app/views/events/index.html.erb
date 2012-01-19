@@ -1,10 +1,6 @@
 <div class="container">
-	<% flash.each do |key, value| %>
-	<div class="<%= key %>">
-		<%= value %>
-	</div>
-	<% end %>
-	<div>
+<%= render 'shared/notice' %>
+	<div class="span-18">
 	  <%= render @events %>
 	</div>
 </div>

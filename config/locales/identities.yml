@@ -6,3 +6,12 @@ zh-CN:
             email: "邮箱"
             password_digest: "密码"
             password: "密码"
+  activerecord:
+    attributes:
+      event:
+        name: "标题"
+        story: "序言"
+  activerecord:
+    attributes:
+      post:
+        photo: "图片"

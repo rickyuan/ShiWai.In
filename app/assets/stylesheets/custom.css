@@ -31,10 +31,6 @@
 	filter: alpha(opacity=100);
 }
 
-.fcontent {
-	
-}
-
 .btn {
 	font-size: 120%;
 	margin-right: 10px;
@@ -48,26 +44,40 @@
 /* login */
 
 .header {
-	margin: 10px auto;
+	margin: 6px auto;
 	width: 950px;
 }
 
+.header a {
+	color: #20a0df;
+}
+
 .square {
-	width: 200px;
+	width: 216px;
 	height: 200px;
-	border: dashed 1px #ccc;
 	float: left;
 	margin-right: 20px;
+	margin-top: 10px;
 	position: relative;
 }
 
 .square .sqtext {
 	position: absolute;
 	bottom: 0;
-	background: #999;
+	background: #eeeeee;
 	padding: 5px;
-	width: 190px;
-	height: 48px;
+	width: 206px;
+	height: 51px;
+	overflow: hidden;
+}
+
+.square .sqtext .title {
+	font-size: 120%;
+	overflow: hidden;
+}
+
+.square .sqtext .des {
+	overflow: hidden;
 }
 
 .bigplus {
@@ -97,4 +107,49 @@
 .nav ul li {
 	display: inline-block;
 	padding: 0 0.2em;
+}
+
+/* post */
+
+.action_button {
+	border: 1px solid #999;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	padding: 2px 8px;
+	text-align: center;
+	background: #d8d8d8;
+}
+
+.post {
+	margin-bottom: 10px;
+	width: 710px;
+}
+
+.post .content {
+	padding: 5px 0;
+	color: #3e424b;
+	font-size: 120%;
+}
+
+.event_user {
+	margin-bottom: 5px;
+	background: #eaeaea;
+	padding: 5px;
+}
+
+/* footer */
+
+.footer {
+	width: 950px;
+	margin: 10px auto;
+	padding-top: 10px;
+}
+
+/* paginate */
+
+.paginate {
+	display: block;
+	clear: both;
+	margin: 10px auto;
 }

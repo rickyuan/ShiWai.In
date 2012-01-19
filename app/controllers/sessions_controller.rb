@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   end
 
   def failure
-    redirect_to login_path, :flash => { :notice => "邮箱和密码不符！" }
+    redirect_to login_path, :flash => { :notice => "授权失败！" }
   end
 
   def destroy

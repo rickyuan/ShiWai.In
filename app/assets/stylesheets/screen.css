@@ -26,7 +26,7 @@ a img {border:none;}
 
 /* typography.css */
 html {font-size:100.01%;}
-body {font-size:75%;color:#222;background:#fff;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
+body {font-size:75%;color:#3d3e42;background:#fff;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
 h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
 h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:2em;margin-bottom:0.75em;}
@@ -40,8 +40,8 @@ p {margin:0 0 0.5em;}
 p .left {margin:1.5em 1.5em 1.5em 0;padding:0;}
 .right {float:right !important;}
 p .right {margin:1.5em 0 1.5em 1.5em;padding:0;}
-a:focus, a:hover {color:#09f;}
-a {color:#06c;text-decoration:none;}
+a:focus, a:hover {color:#018dcc;}
+a {color:#20a0df;text-decoration:none;}
 blockquote {margin:1.5em;color:#666;font-style:italic;}
 strong, dfn {font-weight:bold;}
 em, dfn {font-style:italic;}
@@ -65,7 +65,7 @@ th, td, caption {padding:4px 10px 4px 5px;}
 tbody tr:nth-child(even) td, tbody tr.even td {background:#e5ecf9;}
 tfoot {font-style:italic;}
 caption {background:#eee;}
-.small {font-size:.8em;margin-bottom:1.875em;line-height:1.875em;}
+.small {font-size:.8em;line-height:1.875em;}
 .large {font-size:1.2em;line-height:2.5em;margin-bottom:1.25em;}
 .hide {display:none;}
 .quiet {color:#666;}
@@ -105,7 +105,7 @@ form.inline p {margin-bottom:0;}
 .info a {color:#205791;}
 
 /* grid.css */
-.container {width:950px;margin:0 auto;}
+.container {width:950px;margin:0 auto;min-height:480px}
 .showgrid {background:url(src/grid.png);}
 .column, .span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12, .span-13, .span-14, .span-15, .span-16, .span-17, .span-18, .span-19, .span-20, .span-21, .span-22, .span-23, .span-24 {float:left;margin-right:10px;}
 .last {margin-right:0;}

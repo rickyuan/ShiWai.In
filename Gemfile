@@ -4,6 +4,10 @@ gem 'rails', '3.1.1'
 gem 'paperclip', '~> 2.0'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog'
+gem 'kaminari'
+gem 'yaml_db'
+gem 'passenger'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -14,6 +18,7 @@ gem 'sqlite3'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'omniauth-identity'
+gem 'omniauth-weibo'
 
 
 # Gems used only for assets and not required

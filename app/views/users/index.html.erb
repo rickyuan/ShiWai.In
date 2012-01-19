@@ -1,7 +1,3 @@
 <div class="container">
-	<% flash.each do |key, value| %>
-	<div class="<%= key %>">
-		<%= value %>
-	</div>
-	<% end %>
+<%= render 'shared/notice' %>
 </div>

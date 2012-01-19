@@ -5,13 +5,16 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta property="wb:webmaster" content="80d0f9c80ba2ab2a" />
 </head>
 <body>
   <% unless current_user.nil? %>
     <%= render 'layouts/header' %>
   <% end %>
 
-<%= yield %>
-
+  <%= yield %>
+  <% unless current_user.nil? %>
+  <%= render 'layouts/footer' %>
+  <% end %>
 </body>
 </html>

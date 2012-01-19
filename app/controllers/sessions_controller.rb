@@ -4,7 +4,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.from_omniauth(env["omniauth.auth"])
+    auth = request.env["omniauth.auth"]
+    user = User.from_omniauth(auth)
     session[:user_id] = user.id
     redirect_to root_path, notice: "欢迎来到世外，#{current_user.name}！"
   end
